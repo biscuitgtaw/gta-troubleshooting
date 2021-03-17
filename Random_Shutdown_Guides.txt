@@ -1,0 +1,12 @@
+First off, if you have not tried, I'd highly suggest checking the common troubleshooting steps in the #rage-troubleshooting channel, they seem to help lots of people and also come with official advice directly from RageMP Developers.
+
+If that does not seem to help you out, try the following three guides:
+TRY ME FIRST - https://forum.gta.world/en/topic/41331-guide-ragemp-shutting-down-automatically-without-error-codes/?tab=comments#comment-388962
+TRY ME SECOND - https://forum.gta.world/en/topic/42649-fix-game-crashing-shortly-after-pressing-play-rockstar-launcher-edition%C2%A0/?tab=comments#comment-405147
+TRY ME THIRD - https://forum.gta.world/en/topic/42835-fix-r-games-launcher-downloading-when-opening-rage-then-closes/?tab=comments#comment-407261
+
+If the above does not appear to help you out and your issue started appearing after the last update, downloading the following and dragging and dropping it into your GTA V folder seemed to help a lot of people:
+https://cdn.discordapp.com/attachments/781096864563855370/788700548819582996/GTAV.zip
+
+If any of the above resolutions does not work, I highly suggest joining the RageMP Discord and asking for assistance in their dedicated support channels as they may be able to assist you further:
+https://discord.gg/ragemp

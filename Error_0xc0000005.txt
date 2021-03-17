@@ -1,0 +1,161 @@
+Disable all of windows security measures and firewall, I know this sounds scary but if you know what you do on your computer, you'll be safe.
+
+Also it is important to set ALL apps related to GTA V to run as ADMIN, all apps in steam GTA folder and both Rockstars launcher folders. (NOTE: I also remove FS optimizations and DPI settings)
+
+In Windows version 1903+ there's a specific program running in the background that takes a lot of memory. This method was tried and it seemed to have worked:
+1. Go into settings
+2. Click Privacy
+3. Scroll down on the left side of the settings till you see background apps
+4. Disable Background apps
+
+Try the following as copied and pasted from the steam forums:
+Yes, this is long - forced to revise it. There is no TL;DR version.
+---Tired of people taking the easy way out and lying about it.
+
+That c0000005 error (in relation to gtav and shared with 8000003/c000094) is typical of:
+1- Usb devices (controllers, webcams, soundcards, mixers, phones, mics, anything USB)
+2- Audio/video apps/services (including msi, razer, riva/rtss, GFexp, fraps, overlays)
+3- Mods (any and all - remove them - get it working without vanilla style)
+4- Drivers (gpu, audio, network, mobo), OS updates, and settings - includes autoupdates.
+5- Antivirus/security/malware/adware - yep, combo of updates, apps, perms can give this.
+6- Hardware degredation, memory/hdd fails, OC's, bios, etc. Save for last - usually.
+7- Miscellaneous stuff. Just as important.
+
+These steps are to rule things out that can/commonly cause this. Don't understand these steps? Can't do it? Lack permissions? Say so! They can be calculated into future attempts to help. Once you know the problem/narrowed it down - you can try upgrading, downgrading, uninstalling, and reinstalling the drivers and software for it. For awhile now- some stuff needs to be uninstalled or reinstalled after a OS/driver/install. Annoying, and NOT only a gtav issue (yay win10 /s).
+
+And now to start -
+(NOTE - I do NOT care if anything I suggest disabling below "worked before")
+(Eliminate variables. Leave them eliminated. Narrow it down/rule it out)
+
+0 --- Steam version only - VERIFY CACHE GOOD GOD.
+Exit steam, rightclick steam, run steam as admin.
+Rightclick gtav in steam, properties, local files tab, verify integrity of game cache.
+If you set gtav .exe's to run as admin - undo it. If you changed windows compat - undo it.
+(some users "may" need .exe's as admin - usually, R* versions of the game - YMMV)
+
+
+1 --- Unplug any usb device that is NOT a keyboard or mouse. ANY. I don't care how much you need it. Unplug it. DO IT. Test gtav. It works? MIRACLE. Now you can plug them back in 1! at a time and test. Found the one causing issues? You can reinstall/update/verify/research drivers for usb/mobo/problem peripherals.
+
+*"Question! What if my gtav install is on external hdd?" (why?) Yes, leave that plugged in, and continue testing. It will be suspect later if you keep having issues (or test/update usb port, cable, drivers, usb powermanagement/disable it, etc) - lists naturally have a start/end - this info had to go somewhere.
+
+
+2 --- Open msconfig (Start/run or winkey+R). Go to services tab, checkmark "hide MS services", disable ALL BUT R* related. Next- click the startup tab in msconfig (you may need to click to open taskmanager). Disable EVERYTHING there also. This will stop/disable most everything running in the background. Some WILL fight this/re-add themselves after a restart. Apply/restart pc. Do NOT test gtav yet.
+
+Still got apps starting up? You opened anything except steam? Close it. Open taskmanager. Look in both the processes and details tab(show more details). Any above mentioned "common problem" apps running? Razer/MSI/RIVA/RTSS, etc? There really shouldn't be now - if there are - force close them (and uninstall them). Now try gtav. Works? Wonderful.
+
+Now you can re-enable 1-2 of the services/startup apps you disabled. Apply, restart pc - try again. Find the one causing the problem. And then - you should know what to do.
+
+In some cases, things can also be buried in task scheduler for startup. You can dig through it yourself or use some other tool to see 'all startups' across a OS for a bigger picture of everything.
+
+*Some antivirus/security won't let you disable via msconfig.
+Some put themselves back. Ignore them for now.
+
+**For MSI/RTSS/etc - you can test custom hooking/no hooking or straight ignore gtav/etc if you are sure they are the problem/require certain version or some combination of drivers/application are necessary for some other reason/not working for you.
+
+
+3 --- Gtav mods. Remove them. All of them. You think you removed all them? Never used mods? Forgot about them? Doesn't matter. Go through the motions. There is a link here to both versions of gtav - Steam's and Rockstar's . Click the appropriate one for steps to verify your folder is "clean". The steps in there will also verify your folder/files - and the process "usually" works correctly for steam. Sometimes not. The R* version of verify is far less stable/prone to errors - especially if this is your first install with zero proof the game ever worked.
+All in all - a fairly quick process (again - provided it actually works as it should -.-)
+
+*Have this crash and refuse to remove the mods? Say so - so I can ignore. Seriously.
+(then look up custom gameconfig.xml, corrupt mods, files, conflicts). It is your best interest to verify a clean gtav works and not ignore modifications you made to files. This is especially relevant around updates. -.-
+
+
+4 --- Driver-wise - the most common offender is gpu drivers and/or settings. They are 'updated' the 'most' for whatever godawful reason, are usually screwed up with OS updates, and/or have "fixes" where you throw files in the gtav folder (which #3 cleaned). Do not use windows update for these. Google your gpu model, find the appropriate vendor/driver website and download them. Preferably, you use DDU to uninstall them in windows safemode, and then CLEAN reinstall them. You CAN try to use their uninstallers and reinstall - however they are NOT always successful. Nope, don't care if you updated them "last week".
+
+If you are having crashes on a new driver, you can also try rollingback/using an older version. I'm not staying on top of driver versions. You say 'But but but - the newest driver gives me 1 fps more!' - this is me --> not caring.
+
+While reinstalling nvidia drivers - you'd be wise to NOT install geforce experience or nvidia HD audio. They've caused issues before and you are ruling things out. Don't add more junk back - if you truly need these - install them later AFTER the problem has been found/fixed. Restart the pc after the drivers are installed - even if it does not ask. No, do not hibernate/sleep. Shut the pc down for a real restart. Once it restarts-
+
+Open my documents. RENAME rockstar games to rockstar games-OLD. This will remove your settings, and saves - incase either are problematic/corrupted. They'll be safe in the rockstar games-OLD. Deleted instead of renaming? That's on you. This step can be somewhat problematic because of security/permissions. Some users may find that gtav is not recreating the renamed folder/subfolders/files. In this case - you can test by manually creating the "rockstar games" folder, and "gta v" and "social club" inside of it.
+
+*Don't use cloudsaves - be responsible for your data. Added here because 'some' are incapable of going down multiple links. You can disable via social club menu ingame, or by deleting cloudsavedata.dat from my docs / rockstar games / gtav / profile~
+
+*Wiped/reinstalled windows to try to fix this? Make sure windows is FULLY updated before you update/install drivers. Win10/other autoupdates caused problems before. Didn't wait? Simply go through the driver reinstall process again.
+
+**100+ instances of this now - remove the directx files: Use this .bat file I wrote from the link below. It will move the files to backup folders and it will open a copy of windows explorer for each of those directories. There SHOULD BE 90 files in each - check. To run it - exit steam, rightclick the .bat, run as admin. You may need to hit 'any key' to continue through the pauses. You can observe the progress and look for errors. If you skip this step - say so. I would highly prefer you did it.
+(If you're hesitant to run this - rightclick, edit it, and see exactly what it does) Easy peasy.
+.bat - https://drive.google.com/file/d/1rJvafaYjKDOZia5IBMeeIOU5sVZPfzKW/view
+(And please, quit dropping random files/versions in your system32.. -.-)
+
+After you run the .bat - install directx again. Preferably you grab it from here -
+https://www.microsoft.com/en-us/download/details.aspx?id=35
+Rightclick - run as admin. Restart the pc afterwards. Try gtav.
+(you can also use the steam/steamapps/common/gtav/installers/socialclubsetup)
+
+***Steam GTAV also has steam/steamapps/common/steamworks shared/vcredist/2012. Run the vcredistx86 and x64 as admin - uninstall both before reinstalling them. Have seen cases where repair didn't work (the systems had other issues). The R* version doesn't have the vcredist/directx distributables in the directory (unless they changed it). Google/download/install.
+
+****Audio, network, bluetooth, wifi, blah blah drivers - are sporadic and you should recognize when you fussed with new drivers/devices. Also important if you redid windows and are using "generics". While reinstalling network drivers - sometimes their extra optimization or bloatware software causes other problems. Can also be targeted by malware/adware/etc. Larger more specific link on profile for social club/network related.
+
+***For audio device issues/conflicts - you can also try disabling ALL other audio/playback/record'n devices in devicemanager. Yes, no sound - rule out the drivers/devices.
+
+
+5 --- Antivirus/security. Got this far? Are SURE you've done everything? You can test by adding gtav to your antivirus/security realtime/scanning exclusions. There's no guarantee this works - just personally have seen it cause problems before. Of course, the apps are all different - some turn off/stealth while in fullscreen/etc - you'll have to learn (ohnoes!) about your AV/security. Temp sleep, disable, or exclude gtav/social club .exe's. If you can't - or just fed up.. uninstall it - outright remove it from the equation. You can reinstall it later. Yes, windows defender counts.
+
+*I would google adwcleaner from toolslib or malwarebytes - and scan/clean your pc. YES, this will sometimes find apps YOU think are ok, or use - and again - I emphasize - I don't care. There are quite a few apps/things in the past that generated c000005 errors that were immediately fixed after a scan/clean.
+
+
+6 --- Hardware. True "random" crashing. Power issues, memory gone bad, XMP profile on/off, hard drive generating bad spots - there are many random errors that can pop up with these problems, they can be "consistant", they can manifest as changing errors, BSOD's, errors all over the pc, etc. Again, the thoroughness/reliability of this section depends on you and your past gtav experience. Gtav had no update in 3 months? This section is relevant. Gtav updated 3 hours ago and problems since? I'd "move" this section to the bottom of the post - come back later. Scan your hdd/memory for errors (software used is up for debate). Observe your temps. Tinkering with your OC? Don't care - remove it. Gtav can be pretty finicky with OC's (usually pops a d3d_gfx_init error though) - IS worth testing if you've gotten this far. Possibly default bios settings.
+
+*Yes, people to point to bios firmware as solution. Possible yes. I never outright suggest if evidence says they have NOT done this post entirely. -.-
+
+
+7 --- This section is unsorted causes. The "majority" have been personally confirmed at some point. Some things here are not covered above.
+
+Cheating/mod use? Others stated a new char fixed probs. YMMV.
+
+Windows 10 spatial audio can cause issues - turn it off.
+
+*manually set pagefile/virtual memory config. Test setting back to windows/system controlled. Run sysdm.cpl, advanced tab, performance/settings, advanced tab, virtual memory/change. Verify drives are not running out of space for windows pagefile to expand into. You can tinker around with size/location depending on your ram. Don't remove entirely - known to cause issues.
+
+*5+ instances where the error was fixed with sfc /scannow from admin command prompt.
+
+*Open eventvwr.msc. Custom view - admin events. Sort by timestamp. Find the newest gtav crash log. Does it mention EZFRD64.dll ? It does? WOOT! -.-
+Open windows/USB_vibration/<somenumbers>/
+Rename EZFRD64.dll to EZFRD64.quitcrashing - test gtav. Works? Your controller, drivers, vibration has issues. Reinstall, update, research, etc.
+
+*pop'd via corrupt mfreadwrite.dll - eventvwr crash reports show'd evidence of issues with that file as well as throwing 2-3 errors reports per crash. Usually from dumping incorrect files into windows/system32 or gtav folder. Update files properly/get correct versions. See mfreadwrite and c00007b links on my profile.
+
+*Dec2017 - A couple cases now where a missing Media Feature Pack would pop a c00005 instead of the usual c000135 or c00007b. Relevant to windows N/KN versions - and using the correct MFP for the OS/build. Again - links on my profile.
+
+*Since import/export update - some users with OC's on the gpu/cpu/memory are getting this code / random crashes.
+
+*Some fixed with- winkey+R - msconfig - boot tab - advanced options - MAKE SURE DEBUG IS NOT CHECKED. Apply/restart.
+
+*nvidia hd audio in device manager has caused this problem. (I suspect other software devices can cause this but no firsthand experience with them to verify - virtual audio cable comes to mind). Test by disabling any audio/game controller in device manager.
+
+*A couple have placed blame recently on geforce experience/gtav settings / corrupt gtav files. Untested/proven. Verify cache handled one - uninstall geforce exp handles the other.
+ALSO includes section 3 in this link ---- http://steamcommunity.com/app/271590/discussions/0/451848854986690187/#c451848854986692215
+
+*Dec2016 - Latest update causing problems for users with Astril(can be configured), Lavasoft software (ad-aware/web compantion), hidemyip, etc. Uninstall/disable. Google adwcleaner toolslib - download, scan, clean. Should do anyways as a precautionary step. To quote "I don't have malware" with 1600+ "threats" - 27 being programs. Instantly worked/no crashes after cleaning/restart.
+
+*Dec2017 - Some users throwing c000005 in relation to german/non-english languages. These also used to appear appear as 255(ff). Something to eyeball/check/test.
+Sept2018 - more people having server unreachable/job download issues due to language. Quite possible a portion of these crashes *currently* could be related. Try other languages or match languages to steam/os. Change language in steam or languagechanger.exe in gtav folder. R* supposedly aware/working on it.
+
+*March2018 - "rumored" c000005's related to R* ip blocking in the hosts file -.-
+Most/all evidence/straight up admitted - points to cheating/tampering with hosts.
+Anything related to gtav/R* in c:\windows\system32\drivers\etc\hosts? Remove it.
+(can just rename the hosts to hosts-hold incase you can't edit it)
+Can't do anything with the hosts? Try going to windows safemode - and try to rename again. Is it a giant 1+mb text file? Just rename/test anyways. -.-
+
+*July+2018 - No firsthand experience on this one - not tested enough. Others have come to me stating it helped - YMMV. Could be similar to mydocs permissions/folder issues.
+Open c/users/<usernameinwindows>/appdata(it is hidden/system)/local - there is a rockstar games folder - rename rockstar games-old.
+
+*Jan2019- Now 6 confirmed instance of hard drive firmware being a cause.
+
+*Yes - some Rockstar/servers/connection/etc make everyone have these crashes. When that is the case- everyone is crashing - forums are screaming. There have been variations of this after update/tunables - where it has/hasn't been proven that it was fixable on the user's end. Especially- if R* pushed a "fix" to the update. People routinely panic and start fixing stuff before R* can react - confusing things.
+
+*In really "rare" cases (personally seen 3 from 100's), you can open task scheduler, scheduler library, and disable extra startups there. Rightclick - disable. Restart pc. Test. Just putting it here - extra info.
+
+*** Some have exclaimed fixed after going down yet another link/rabbit hole. I haven't verified anything here - the only things that make sense... are things ALREADY mentioned above (malware/adware/adwcleaner/msconfig/hosts - and restarting modem/router/pc)
+YMMV -
+http://steamcommunity.com/app/271590/discussions/0/133259227525755057/#c133259227525787698
+
+--- Done.
+
+** NO ** - this link does NOT cover every cause of this error. New software, drivers, updates, issues pop up all the time. I'm not paid to maintain this with 0 day fixes. Nevermind getting people experiencing these problems to be methodical because they are already got the shakes after 30 minutes of crash. Tried and tried? Following the post to the letter? I'm can use teamviewer to sort out your issue(new/old), and/or doublecheck your work. Don't be a shmuck - help me help you and the community. -.-
+
+To reiterate to the R* version users that bemoan support and wander here -
+
+Yes, this error also occurs on R* versions that simply/absolutely refuse to install properly or the cases where -verify fails to correct half/corrupt/and in some cases - missing files from the game dir. You either reinstall, get a working copy from someone, go pester R*, or compare md5 / eyeball verify the .rpf's (usually) against a CURRENTLY known working copy). (In "most" cases - this is common AFTER gtav has an update, and the new update.rpf / and new dlc files aren't downloaded/updated properly)
+
+** If you only do 3 things on this list and say "this dont work" or "waaa its too long" so you skipped stuff - admit so. These posts are absolutely useless and get you nowhere with me. As said - I can teamviewer and try to help. I've been fixing gtav here for 3+ years. Thousands fixed. As a jaded tech - I'll never believe you unless I see it - I've had far too much time wasted by straight up being lied to.
