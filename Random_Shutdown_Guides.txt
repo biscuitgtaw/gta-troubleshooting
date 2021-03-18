@@ -8,5 +8,10 @@ TRY ME THIRD - https://forum.gta.world/en/topic/42835-fix-r-games-launcher-downl
 If the above does not appear to help you out and your issue started appearing after the last update, downloading the following and dragging and dropping it into your GTA V folder seemed to help a lot of people:
 https://cdn.discordapp.com/attachments/781096864563855370/788700548819582996/GTAV.zip
 
+If the issue started persisting as of the 1.15.3 update for GTA V, try the following guide: https://forum.gta.world/en/topic/45350-fix-the-1153-update-is-crashing-your-game/
+
 If any of the above resolutions does not work, I highly suggest joining the RageMP Discord and asking for assistance in their dedicated support channels as they may be able to assist you further:
 https://discord.gg/ragemp
+
+An alternative method would be to post your C:\User Files\YOURNAME\Documents\Rockstar Games\Launcher\launcher.log file onto a thread on the following forum:
+https://forum.gta.world/en/forum/35-questions/
