@@ -10,6 +10,8 @@ https://cdn.discordapp.com/attachments/781096864563855370/788700548819582996/GTA
 
 If the issue started persisting as of the 1.15.3 update for GTA V, try the following guide: https://forum.gta.world/en/topic/45350-fix-the-1153-update-is-crashing-your-game/
 
+If the above does not seem to work, shutdown discord entirely and attempt to launch RageMP and see if that is causing the issue.
+
 If any of the above resolutions does not work, I highly suggest joining the RageMP Discord and asking for assistance in their dedicated support channels as they may be able to assist you further:
 https://discord.gg/ragemp
 

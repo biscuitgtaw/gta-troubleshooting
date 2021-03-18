@@ -1,3 +1,5 @@
+Shutdown discord entirely and attempt to launch RageMP and see if that is causing the issue and disable ANY AND ALL overlays that may be injecting into your game.
+
 Disable all of windows security measures and firewall, I know this sounds scary but if you know what you do on your computer, you'll be safe.
 
 Also it is important to set ALL apps related to GTA V to run as ADMIN, all apps in steam GTA folder and both Rockstars launcher folders. (NOTE: I also remove FS optimizations and DPI settings)
