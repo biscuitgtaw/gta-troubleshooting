@@ -8,6 +8,10 @@ In Windows version 1903+ there's a specific program running in the background th
 3. Scroll down on the left side of the settings till you see background apps
 4. Disable Background apps
 
+Attempt to launch your Windows 10 under Safemode with Networking and see if you can launch RageMP without any issues, if yes, then it's a program that is preventing your RageMP from launching.
+
+If you have any type of custom antivirus programs, uninstall them completely.
+
 Try the following as copied and pasted from the steam forums:
 Yes, this is long - forced to revise it. There is no TL;DR version.
 ---Tired of people taking the easy way out and lying about it.
@@ -159,3 +163,6 @@ To reiterate to the R* version users that bemoan support and wander here -
 Yes, this error also occurs on R* versions that simply/absolutely refuse to install properly or the cases where -verify fails to correct half/corrupt/and in some cases - missing files from the game dir. You either reinstall, get a working copy from someone, go pester R*, or compare md5 / eyeball verify the .rpf's (usually) against a CURRENTLY known working copy). (In "most" cases - this is common AFTER gtav has an update, and the new update.rpf / and new dlc files aren't downloaded/updated properly)
 
 ** If you only do 3 things on this list and say "this dont work" or "waaa its too long" so you skipped stuff - admit so. These posts are absolutely useless and get you nowhere with me. As said - I can teamviewer and try to help. I've been fixing gtav here for 3+ years. Thousands fixed. As a jaded tech - I'll never believe you unless I see it - I've had far too much time wasted by straight up being lied to.
+
+If any of the above does not assist you, ask for support on the official RageMP Discord Server:
+https://discord.gg/ragemp
